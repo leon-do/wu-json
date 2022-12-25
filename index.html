@@ -1,0 +1,9 @@
+<script>
+  (async () => {
+    const name = await fetch("https://raw.githubusercontent.com/leon-do/wu-json/main/names.json").then((res) => res.json());
+    const randomAdjective = name.adjectives[Math.floor(Math.random() * name.adjectives.length)];
+    const randomNoun = name.nouns[Math.floor(Math.random() * name.nouns.length)];
+    const randomName = `${randomAdjective} ${randomNoun}`;
+    alert(randomName);
+  })();
+</script>
